@@ -81,12 +81,6 @@ function createCardDiv(card, topOffset = 0) {
   corner.textContent = `${card.rank}${card.suit}`;
   content.appendChild(corner);
 
-  const img = document.createElement('img');
-  img.className = 'card-image';
-  const isRoyal = ['J', 'Q', 'K'].includes(card.rank);
-  img.src = isRoyal ? 'royalty.jpg' : 'cosmo.jpg'; 
-  img.alt = isRoyal ? 'royalty' : 'cosmo';
-  content.appendChild(img);
 
   cardDiv.appendChild(content);
   return cardDiv;
