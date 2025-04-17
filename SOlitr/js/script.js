@@ -80,11 +80,20 @@ function createCardDiv(card, topOffset = 0) {
   corner.textContent = `${card.rank}${card.suit}`;
   content.appendChild(corner);
 
-
+  // ✅ Add card image back in
+  const img = document.createElement('img');
+  img.className = 'card-image';
+  const isRoyal = ['J', 'Q', 'K'].includes(card.rank);
+  img.src = isRoyal 
+    ? '/Final-Project/Solitr/images/royalty.jpg' 
+    : '/Final-Project/Solitr/images/cosmo.jpg';
+  img.alt = isRoyal ? 'royalty' : 'cosmo';
+  content.appendChild(img);
 
   cardDiv.appendChild(content);
   return cardDiv;
 }
+
 
 
 function enableDragging(cardDiv, cards, from) {
