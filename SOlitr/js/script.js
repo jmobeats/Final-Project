@@ -85,8 +85,8 @@ function createCardDiv(card, topOffset = 0) {
   img.className = 'card-image';
   const isRoyal = ['J', 'Q', 'K'].includes(card.rank);
   img.src = isRoyal 
-    ? '/Final-Project/Solitr/images/royalty.jpg' 
-    : '/Final-Project/Solitr/images/cosmo.jpg';
+    ? '/Final-Project/SOlitr/images/royalty.jpg' 
+    : '/Final-Project/SOlitr/images/cosmo.jpg';
   img.alt = isRoyal ? 'royalty' : 'cosmo';
   content.appendChild(img);
 
