@@ -67,24 +67,7 @@ function canMoveToFoundation(card, pile) {
   return card.suit === top.suit && RANKS.indexOf(card.rank) === RANKS.indexOf(top.rank) + 1;
 }
 
-function createCardDiv(card, topOffset = 0) {
-  const cardDiv = document.createElement('div');
-  cardDiv.className = 'card';
-  if (isRed(card.suit)) cardDiv.classList.add('red');
-  cardDiv.style.top = `${topOffset}px`;
 
-  const content = document.createElement('div');
-  content.className = 'card-content';
-
-  const corner = document.createElement('div');
-  corner.className = 'corner';
-  corner.textContent = `${card.rank}${card.suit}`;
-  content.appendChild(corner);
-
-
-  cardDiv.appendChild(content);
-  return cardDiv;
-}
 
 function enableDragging(cardDiv, cards, from) {
   cardDiv.draggable = true;
